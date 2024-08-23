@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-width: none
+}
+
+body{
+    background-color: #250C30;
+  
+}
+
+.Container-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    font-family: "Jost", sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background-color: #210B2B;
+}
+
+.logo{
+    height: 74px;
+    width: 63px;
+    cursor: pointer;
+}
+
+
+.navegacion a{
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 40px;
+    color: #FF911C;
+}
+
+.navegacion a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #FF911C;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navegacion a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.Banner-Principal{
+    height: 100vh;
+    width: 100%;
+}
+
+.Welcome-Text{
+    font-family: "Jost", sans-serif;
+    color: #FFFF;
+    text-align: center;
+    margin: 30px 10% 5px;
+}
+
+.Welcome-Text h2{
+    font-weight: 600;
+    font-size: 2.3em;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.Welcome-Text p{
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.Container-Cards{
+    display: flex;
+    max-width: 100%;
+    height: 90vh;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    box-sizing: content-box;
+}
+
+.card-1,
+.card-3{
+    position: relative;
+    width: 255px;
+    height: 355px;
+    margin: 0 50px;
+    border-radius: 25px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .3);
+}
+
+.card-2{
+    position: relative;
+    width: 350px;
+    height: 450px;
+    margin: 0 50px;
+    border-radius: 25px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .3);
+}
+
+.content-1,
+.content-3{
+    width: 100%;
+    height: 100%;
+}
+
+.content-2{
+    width: 100%;
+    height: 100%;
+}
+
+.content-1 img,
+.content-3 img{
+    width: 100%;
+    height: 100%;
+}
+
+.content-2 img{
+    width: 100%;
+    height: 100%;
+}
+
+.card-1-h,
+.card-3-h{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48, 30, 12, .6);
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+    padding: 55% 8%;
+    transition: all 0.7s ease;
+    cursor: pointer;
+}
+
+.card-2-h{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48, 30, 12, .6);
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+    padding: 55% 8%;
+    transition: all 0.7s ease;
+    cursor: pointer;
+}
+
+.card-1-h h2,
+.card-3-h h2{
+    font-family: "Jost", sans-serif;
+    font-weight: 600;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.card-2-h h2{
+    font-family: "Jost", sans-serif;
+    font-weight: 600;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.card-1-h p,
+.card-3-h p{
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+.card-2-h p{
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+.card-1:hover .card-1-h,
+.card-3:hover .card-3-h{
+    opacity: 1;
+}
+
+.card-2:hover .card-2-h{
+    opacity: 1;
+}
+
+.AU{
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    text-align: center;
+    color: #FFFF;
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+}
+
+.app-use-container{
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.app1,
+.app2,
+.app3,
+.app4,
+.app5,
+.app6,
+.app7,
+.app8,
+.app9{
+    display: flex;
+}
+
+.app1 img,
+.app2 img,
+.app3 img,
+.app4 img,
+.app5 img,
+.app6 img,
+.app7 img,
+.app8 img,
+.app9 img{
+    width: 80px;
+    height: 80px;
+}
+
+.app1 h3,
+.app2 h3,
+.app3 h3,
+.app4 h3,
+.app5 h3,
+.app6 h3,
+.app7 h3,
+.app8 h3,
+.app9 h3{
+
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6),
+                 0 0 20px rgba(255, 255, 255, 0.4),
+                 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.app1 p,
+.app2 p,
+.app3 p,
+.app4 p,
+.app5 p,
+.app6 p,
+.app7 p,
+.app8 p,
+.app9 p{
+    font-family: "Jost", sans-serif;
+    font-weight: 300;
+    color: white;
+}
+
+.text-au{
+    text-align: left;
+    padding: 5px 15px;
+}
+
+.app1 h3,
+.app2 h3,
+.app3 h3,
+.app5 h3,
+.app6 h3,
+.app8 h3,
+.app9 h3{
+    margin-bottom: 8px;
+}
+
+
+
