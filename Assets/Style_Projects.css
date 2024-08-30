@@ -73,6 +73,7 @@ header{
 }
 
 button {
+    flex-basis: unset;
     --bg: #FF911C;
     --text-color: #fff;
     position: relative;
@@ -82,7 +83,6 @@ button {
     color: var(--text-color);
     padding: 1em;
     font-weight: bold;
-    text-transform: uppercase;
     transition: 0.2s;
     border-radius: 5px;
     opacity: 0.8;
@@ -131,19 +131,9 @@ button:active {
     width: 100%;
     max-width: 100%;
     height: 100%;
-    display: block;
     object-fit: cover; 
 }
 
-.imgs-container{
-    display: absolute;
-}
-
-.img-container img{
-    width: 25%;
-    height: 25%;
-    object-fit: cover;
-}
 
 
 
