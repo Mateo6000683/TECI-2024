@@ -132,11 +132,13 @@ input {
 input:checked + label {
   width: 600px;
 }
+  
 
 input:checked + label .description {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
+
 
 .card[for="c1"] {
   background-image: url('https://blog.cryptoflies.com/wp-content/uploads/2024/06/pudgy-penguins-igloo-inc-overpassip-1170x658.png');
@@ -169,7 +171,7 @@ p {
   margin: 0; /* Elimina cualquier margen adicional */
 }
 
-/* From Uiverse.io by Gaurav-WebDev */ 
+/* From Uiverse.io */ 
 .button {
   height: 50px;
   width: 200px;
