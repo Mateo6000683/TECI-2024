@@ -230,7 +230,8 @@ header{
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin-left: 3.5%;
+    padding-left: 3.5%;
+    padding-right: 2%;
 }
 
 .app1,
