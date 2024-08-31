@@ -90,33 +90,32 @@ header{
 .Welcome-Text p{
     font-size: 1em;
     font-weight: 400;
+    margin-bottom: 2em;
 }
 
 .Container-Cards{
-    display: flex;
-    max-width: 100%;
+    width: 100%;
     height: 90vh;
+    display: flex;
     align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    box-sizing: content-box;
+    justify-content: space-around;
+    gap: 10%;
+    padding: 0 5%;
 }
 
 .card-1,
 .card-3{
     position: relative;
-    width: 255px;
-    height: 355px;
-    margin: 0 50px;
+    width: 25%;
+    height: 60%;
     border-radius: 25px;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, .3);
 }
 
 .card-2{
     position: relative;
-    width: 350px;
-    height: 450px;
-    margin: 0 50px;
+    width: 30%;
+    height: 70%;
     border-radius: 25px;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, .3);
 }
@@ -219,7 +218,8 @@ header{
     text-align: center;
     color: #FFFF;
     font-size: 2.5em;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.1em;
+    margin-top: 1.1em;
 }
 
 .app-use-container{
@@ -230,6 +230,7 @@ header{
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    margin-left: 3.5%;
 }
 
 .app1,
