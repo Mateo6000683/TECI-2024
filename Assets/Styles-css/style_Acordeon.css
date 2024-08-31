@@ -1,0 +1,227 @@
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+}
+
+.card {
+  width: 80px;
+  border-radius: .75rem;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2rem;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  transition: .6s cubic-bezier(.28,-0.03,0,.99);
+  box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row {
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-wrap: nowrap;
+  background: #6DB8E0;
+}
+
+.card > .row > .icon {
+  background: #223;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+.card > .row > .description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  height: 80px;
+  width: 520px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition-delay: .3s;
+  transition: all .3s ease;
+}
+.card > .row1 {
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-wrap: nowrap;
+  background: #911CFF;
+}
+
+.card > .row1 > .icon {
+  background: #223;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+.card > .row1 > .description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  height: 80px;
+  width: 520px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition-delay: .3s;
+  transition: all .3s ease;
+}
+.card > .row2 {
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-wrap: nowrap;
+  background: #FF911C;
+}
+
+.card > .row2 > .icon {
+  background: #223;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+.card > .row2 > .description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  height: 80px;
+  width: 520px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition-delay: .3s;
+  transition: all .3s ease;
+}
+
+
+
+h4 {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-around;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  width: 600px;
+}
+
+input:checked + label .description {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+  background-image: url('https://blog.cryptoflies.com/wp-content/uploads/2024/06/pudgy-penguins-igloo-inc-overpassip-1170x658.png');
+}
+.card[for="c2"] {
+  background-image: url('https://fritz-kola.com/fritz-kola.com/products/desktop/58/image-thumb__58__product_range_slider/Fk_Internationale_Motive_OhneZucker.101d7d17.png');
+}
+.card[for="c3"] {
+  background-image: url('https://thefwa.com/dyn/resources/Case_Model_Case/slide1/7/17077/1721265133/1364_span9/66986b4e7e76cfwa01.png');
+}
+
+p {
+  color: #b0b0ba;
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.description1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  gap: 10px;
+  text-align: center;
+}
+
+.description p {
+  font-size: 18px; /* Agranda el tamaño del texto */
+  line-height: 1.5; /* Mejora la legibilidad del texto */
+  margin: 0; /* Elimina cualquier margen adicional */
+}
+
+/* From Uiverse.io by Gaurav-WebDev */ 
+.button {
+  height: 50px;
+  width: 200px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #FF911C;
+  overflow: hidden;
+  border-radius: 30px;
+  color: #FF911C;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-txt {
+  z-index: 1;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.type1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: #c56f12;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+}
+
+.button:hover {
+  box-shadow: 1px 1px 200px #252525;
+  color: #fff;
+  border: none;
+}
+
+.type1:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
+}
+
+
+.footer-bottom{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.footer-top{
+  display: flex;
+  justify-content: space-between;
+  align-content: space-around;
+}
