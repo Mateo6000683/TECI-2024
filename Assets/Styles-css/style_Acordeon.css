@@ -213,15 +213,3 @@ p {
   visibility: visible;
   transform: scale(100) translateX(2px);
 }
-
-
-.footer-bottom{
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-.footer-top{
-  display: flex;
-  justify-content: space-between;
-  align-content: space-around;
-}
