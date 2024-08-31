@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-width: none
+}
+
+body{
+    background-color: #250C30;
+}
+
+.Container-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+header{
+    font-family: "Jost", sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background-color: #210B2B;
+}
+
+.logo{
+    height: 74px;
+    width: 63px;
+    cursor: pointer;
+}
+
+
+.navegacion a{
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 40px;
+    color: #FF911C;
+}
+
+.navegacion a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #FF911C;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navegacion a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.Banner-AboutUs{
+    width: 100%;
+    height: 100vh;
+}
+
+.Heads{
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 1em;
+}
+
+.BG{
+    display: block;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+
+.text-heads{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    color: white;
+    text-align: center;
+    z-index: 10;
+    margin-top: 50%;
+    padding: 17%;
+}
+
+.text-heads h1{
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    color: #FF911C;
+    font-size: 3em;
+    margin: 0 25%;
+    margin-bottom: 3%;
+}
+
+.text-heads p{
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    margin: 0 17%;
+}
+
+.tp{
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    margin-top: 29px;
+}
+
+.Team{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 3%;
+    margin-left: 12%;
+}
+
+.T1,
+.T2,
+.T3,
+.T4{
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
+    width: 228px;
+    height: 300px
+}
+
+.T1 img,
+.T2 img,
+.T3 img,
+.T4 img{
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+}
+
+.txt-T1,
+.txt-T2,
+.txt-T3,
+.txt-T4{
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(transparent, rgba(26, 8, 34, 0.7) 60%);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    padding: 0 20px;
+    transition: height 0.5s;
+    cursor: pointer;
+    border-radius: 0 0 25px 25px;
+}
+
+.txt-T1 h2,
+.txt-T2 h2,
+.txt-T3 h2,
+.txt-T4 h2{
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 80%;
+    margin-bottom: 5px;
+}
+
+.txt-T1 p,
+.txt-T2 p,
+.txt-T3 p,
+.txt-T4 p{
+    margin-top: 10px;
+    font-family: "Jost", sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.T1:hover .txt-T1,
+.T2:hover .txt-T2,
+.T3:hover .txt-T3,
+.T4:hover .txt-T4{
+    height: 100%;
+}
+
+.T1:hover .img-T1,
+.T2:hover .img-T2,
+.T3:hover .img-T3,
+.T4:hover .img-T4{
+    transform: scale(1.150);
+}
+
+
+footer {
+    background-color: #1c0c32;
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: 'Jost', sans-serif;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.footer-links, .footer-subscribe {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 300px; /* Ajusta este valor según sea necesario */
+}
+
+.footer-links h3, .footer-subscribe h3 {
+    margin-bottom: 10px;
+}
+
+.footer-links li {
+    width: 48%; /* Esto hará que los elementos ocupen aproximadamente la mitad del ancho */
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-subscribe input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.subscribe-button {
+    background-color: #FF781F;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+
+.subscribe-button:hover {
+    background-color: #e8680c;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    border-top: 1px solid hsl(0, 0%, 100%);
+    padding-top: 20px;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    color: #ffffff;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.footer-legal {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer-legal a {
+    color: #fafafa;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    text-decoration: underline;
+}
+
+.footer-legal p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .footer-top {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .footer-logo, .footer-links, .footer-subscribe {
+        text-align: left;
+    }
+
+    .footer-subscribe {
+        max-width: 300px;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
