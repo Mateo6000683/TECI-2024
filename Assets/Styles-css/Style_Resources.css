@@ -388,8 +388,8 @@ iframe{
     letter-spacing: 1px;
     box-shadow: #c0392b  0px 7px 2px, #000 0px 8px 5px;
     text-align: center;
-    text-decoration: none; /* Para asegurarnos de que el enlace no tenga subrayado */
-    display: inline-block; /* Asegura que se comporte como un botón */
+    text-decoration: none;
+    display: inline-block; 
 }
 
 .external-link-button:hover {
@@ -438,7 +438,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 300px; /* Ajusta este valor según sea necesario */
+    max-width: 300px;
 }
 
 .footer-links h3, .footer-subscribe h3 {
@@ -446,7 +446,7 @@ footer {
 }
 
 .footer-links li {
-    width: 48%; /* Esto hará que los elementos ocupen aproximadamente la mitad del ancho */
+    width: 48%; 
     margin-bottom: 8px;
 }
 
