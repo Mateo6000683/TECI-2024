@@ -121,6 +121,7 @@ header{
     color: white;
     text-align: center;
     margin-top: 29px;
+    font-size: 4em;
 }
 
 .Team{
@@ -139,8 +140,8 @@ header{
     overflow: hidden;
     border-radius: 25px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
-    width: 228px;
-    height: 300px
+    width: 70%;
+    height: 100%;
 }
 
 .T1 img,
