@@ -402,6 +402,7 @@ iframe{
 }
 
 
+
 footer {
     background-color: #210B2B;
     color: #ffffff8e;
@@ -520,7 +521,36 @@ footer {
     font-size: 14px;
 }
 
+@media (max-width: 1100px) {
+    .Resources-content {
+        grid-template-columns: 1fr;
+        padding: 0 5%;
+    }
+
+    .Resources-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .Resources-nav button {
+        width: auto;
+        height: 3rem;
+        margin: 0.5rem;
+    }
+
+    .Resources-cards {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+}
+
+
+
 @media (min-width: 768px) {
+
     .footer-top {
         flex-direction: row;
         justify-content: space-between;
