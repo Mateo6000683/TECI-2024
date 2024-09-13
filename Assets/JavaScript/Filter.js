@@ -42,8 +42,6 @@ resourcesNav.forEach(button => {
         bannerSpline.style.display = 'none';
         bannerOthers.style.display = 'none';
 
-
-
         if (category === "youtube") {
             bannerYoutube.style.display = 'block';
             reloadSplineViewer(bannerYoutube);
@@ -63,8 +61,6 @@ resourcesNav.forEach(button => {
 
     });
 });
-
-
 
 document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.card');
