@@ -17,8 +17,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <script src="/Assets/JavaScript/Header_Res.js" defer></script>
+    
     <title>Projects</title>
+
 </head>
 
 
@@ -29,12 +31,12 @@
         <header>
 
             <div class="logo">
-
                 <img src="/Assets/Images/logo.png">
-
             </div>
     
-            <nav class="navegacion">
+            <nav class="navegacion" id="navbar">
+
+                <span class="close" id="Cerrar">&times;</span>
     
                 <a href="Index.html">Home</a>
     
@@ -45,11 +47,16 @@
                 <a href="AboutUs.html">About Us</a>
     
             </nav>
+
+            <div class="burguer_menu" id="Abrir">
+                <img src="/Assets/Images/Bruguer_Menu.svg" alt="">
+            </div>
     
         </header>
 
     </div>
 
+    
     <div class="Banner-Principal">
 
         <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.26/build/spline-viewer.js"></script>

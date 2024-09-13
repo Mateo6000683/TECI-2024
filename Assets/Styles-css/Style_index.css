@@ -37,6 +37,23 @@ header{
     cursor: pointer;
 }
 
+.burguer_menu{
+    display: none;
+}
+
+.burguer_menu img{
+    height: 74px;
+    width: 63px;
+    cursor: pointer;
+}
+
+.navegacion span{
+    display: none;
+    font-size: 2.2em;
+    color: #FF911C;
+    margin-left: 100%;
+    cursor: pointer;
+}
 
 .navegacion a{
     position: relative;
@@ -46,6 +63,12 @@ header{
     font-weight: 600;
     margin-left: 40px;
     color: #FF911C;
+}
+
+.navegacion img{
+    height: 74px;
+    width: 63px;
+    cursor: pointer;
 }
 
 .navegacion a::after{
@@ -443,6 +466,45 @@ footer {
         flex-direction: row;
         justify-content: space-between;
     }
+
+
+}
+
+@media screen and (max-width: 768px){
+
+    .burguer_menu,
+    .navegacion span{
+        display: block;
+    }
+
+
+    .navegacion{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        align-items: center;
+        background-color: #210B2B;
+        padding: .5em 3.5em;
+        gap: 3.8em;
+        overflow: hidden;
+        transform: translateX(100%); 
+        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    }
+
+    .navegacion.visible{
+        transform: translateX(0);
+        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .4);
+    }
+
+
+
+
+
 }
 
 
