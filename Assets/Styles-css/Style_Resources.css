@@ -72,6 +72,34 @@ header{
     height: 100vh;
 }
 
+.Banner-Youtube{
+    width: 100%;
+    height: 100vh;
+}
+
+.Banner-Interactivity{
+    width: 100%;
+    height: 100vh;
+}
+
+.Banner-Spline{
+    width: 100%;
+    height: 100vh;
+}
+
+.Banner-Others{
+    width: 100%;
+    height: 100vh;
+}
+
+.banner-visible {
+    display: block;
+}
+
+.banner-hidden {
+    display: none;
+}
+
 .Resources-header{
     margin-bottom: 32px;
     display: grid;
@@ -238,6 +266,7 @@ header{
 .card.hide{
     display: none;
 }
+
 
 .card img{
     width: 100%;
