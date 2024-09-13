@@ -1,5 +1,4 @@
-el mejor equipo de TECI y su repositorio, contra el mundo
-
+Profe, la pagina que decidimos manejar para el responsive y la implementación del JS en esta entrega es la de Resources
 
 ⠀⠀⠀⣀⣠⣴⠖⠳⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⡶⠚⢻⡁⢀⠃⣀⠤⢿⣄⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⡤⢤⠴⠖⠒⠒⠒⣦⠀
@@ -99,4 +98,3 @@ el mejor equipo de TECI y su repositorio, contra el mundo
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀
 
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-
