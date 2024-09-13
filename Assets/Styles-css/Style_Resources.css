@@ -72,8 +72,8 @@ header{
 }
 
 .burguer_menu img{
-    height: 74px;
-    width: 63px;
+    height: 54px;
+    width: 43px;
     cursor: pointer;
 }
 
@@ -637,6 +637,8 @@ footer {
 
 
     .navegacion{
+        overflow: hidden; 
+        transform: translateX(100%);
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -648,8 +650,6 @@ footer {
         background-color: #210B2B;
         padding: .5em 3.5em;
         gap: 3.8em;
-        overflow: hidden;
-        transform: translateX(100%); 
         transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     }
 
