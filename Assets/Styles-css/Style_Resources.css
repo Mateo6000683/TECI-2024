@@ -130,7 +130,7 @@ header{
 
 .Resources-section h2{
     font-weight: 600;
-    font-size: 2.3em;
+    font-size: 1.5em;
     text-align: left;
     margin: 0;
     margin-bottom: 10px;
@@ -263,36 +263,49 @@ header{
     transform: scaleX(1);
 }
 
-.Resources-cards{
+.Resources-cards {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
     margin-top: 10px;
     margin-left: 10%;
     gap: 6%;
-    flex-wrap: wrap;
 }
 
-.card{
+
+.card {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
-    width: 350px;
-    height: 400px;
+    flex-basis: 300px;
+    max-width: 100%;
     background-color: rgba(71, 0, 95, 0.2);
     border-radius: 50px;
     margin-bottom: 50px;
-
+    box-sizing: border-box;
+    overflow: hidden;
 }
+
+.card img {
+    width: 100%;
+    height: auto; 
+    border-radius: 50px 50px 0 0; 
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1; 
+}
+
+.card .learn-more {
+    margin-top: auto; 
+}
+
 
 .card.hide{
     display: none;
 }
 
-
-.card img{
-    width: 100%;
-    height: 210px;
-    object-fit: cover;
-    border-radius: 20px;
-    cursor: pointer;
-}
 
 .card-body{
     padding: 15px 20px 20px;
@@ -602,8 +615,14 @@ footer {
     .popup-video{
         height: 250px;
     }
+
 }
 
+@media (max-width: 768px) {
+    .card {
+        flex-basis: 100%; 
+    }
+}
 
 
 @media (min-width: 768px) {
