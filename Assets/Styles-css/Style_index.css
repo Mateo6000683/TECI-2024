@@ -168,6 +168,7 @@ header{
 .card-1-h,
 .card-3-h{
     position: absolute;
+    overflow: hidden;
     top: 0;
     left: 0;
     opacity: 0;
@@ -184,6 +185,7 @@ header{
 
 .card-2-h{
     position: absolute;
+    overflow: hidden;
     top: 0;
     left: 0;
     opacity: 0;
@@ -201,15 +203,17 @@ header{
 .card-1-h h2,
 .card-3-h h2{
     font-family: "Jost", sans-serif;
+    align-items: center;
     font-weight: 600;
-    font-size: 2em;
+    font-size: 130%;
     margin-bottom: 10px;
 }
+
 
 .card-2-h h2{
     font-family: "Jost", sans-serif;
     font-weight: 600;
-    font-size: 2.2em;
+    font-size: 135%;
     margin-bottom: 10px;
 }
 
@@ -217,13 +221,13 @@ header{
 .card-3-h p{
     font-family: "Jost", sans-serif;
     font-weight: 400;
-    font-size: 1em;
+    font-size: 95%;
 }
 
 .card-2-h p{
     font-family: "Jost", sans-serif;
     font-weight: 400;
-    font-size: 1.2em;
+    font-size: 105%;
 }
 
 .card-1:hover .card-1-h,
@@ -247,7 +251,7 @@ header{
 
 .app-use-container{
     width: 100%;
-    height: 50vh;
+    height: 50vh; 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
@@ -501,7 +505,40 @@ footer {
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .4);
     }
 
+    /*.Container-Cards{
+        flex-direction: column;
+        overflow: hidden;
+        height: auto;
+        gap: 5;
+    }  
+    Posible Alineación responsive para las tarjetas del index*/
 
+    .card-1-h h2,
+    .card-3-h h2{
+        font-size: 100%;
+    }
+    
+
+    .card-2-h h2{
+        font-size: 110%;
+    }
+
+    .card-1-h p,
+    .card-3-h p{
+        font-size: 60%;
+    }
+
+    .card-2-h p{ 
+        font-size: 75%;
+    } 
+
+    .app-use-container{
+        height: auto;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-bottom: 3%;
+        overflow: hidden;
+    }
 
 
 

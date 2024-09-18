@@ -116,7 +116,7 @@ header{
 
 .text-heads {
     position: absolute;
-    top: 44%;
+    top: 36%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
@@ -130,7 +130,7 @@ header{
     font-family: "IM Fell Double Pica SC", serif;
     font-weight: 400;
     color: #FF911C;
-    font-size: 3em;
+    font-size: 2.8em;
     margin-bottom: 4%;
     margin: 0 30%;
 }
@@ -138,7 +138,7 @@ header{
 .text-heads p {
     font-family: "Jost", sans-serif;
     font-weight: 400;
-    font-size: 1.1em;
+    font-size: .9em;
     margin: 0 20%;
 }
 
@@ -408,7 +408,20 @@ footer {
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .4);
     }
 
-
+    .text-heads {
+        top: 42%;
+        left: 50%;
+    }
+    
+    .text-heads h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+    
+    .text-heads p {
+        font-size: .7em;
+    }
+    
 
 
 
