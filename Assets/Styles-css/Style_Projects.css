@@ -286,6 +286,7 @@ footer {
     font-size: 14px;
 }
 
+
 @media (min-width: 768px) {
     .footer-top {
         flex-direction: row;
