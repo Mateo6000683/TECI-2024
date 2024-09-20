@@ -14,6 +14,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2em;
 }
 
 header{
@@ -67,109 +68,150 @@ header{
     transform: scaleX(1);
 }
 
-.burguer_menu{
-    display: none;
-}
-
-.burguer_menu img{
-    height: 54px;
-    width: 43px;
-    cursor: pointer;
-}
-
-.navegacion span{
-    display: none;
-    font-size: 2.2em;
-    color: #FF911C;
-    margin-left: 100%;
-    cursor: pointer;
-}
-
-
-.Banner-Principal{
+.Banner-AboutUs{
+    width: 100%;
     height: 100vh;
-    width: 100%;
 }
 
+.Heads{
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 1em;
+}
 
+.BG{
+    display: block;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
 
-button {
-    font-family: "Jost", sans-serif;
-    font-size: 0.9em;
-    --bg: #FF911C;
-    --text-color: #fff;
-    position: relative;
-    width: 50%;
-    border: none;
-    background: var(--bg);
-    color: var(--text-color);
-    padding: 1em;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: 0.2s;
-    border-radius: 5px;
-    opacity: 0.8;
-    letter-spacing: 1px;
-    box-shadow: #c0392b  0px 7px 2px, #000 0px 8px 5px;
+.text-heads{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    color: white;
     text-align: center;
-    text-decoration: none; /* Para asegurarnos de que el enlace no tenga subrayado */
-    display: inline-block; /* Asegura que se comporte como un botón */
+    z-index: 10;
+    margin-top: 50%;
+    padding: 17%;
 }
 
-button:hover {
-    opacity: 1;
-}
-
-button:active {
-    top: 4px;
-    box-shadow: #c0392b 0px 3px 2px,#000 0px 3px 5px;
-}
-
-.projects {
-    display: flex;
-    margin: 5%;
-    align-items: center;
-}
-
-.imginfo {
-    color: #FFFF;
-    width: 40%;
-    margin: 5% 0;
-    margin-right: 5%;
-    margin-left: 3%;
-    font-size: 1.1rem;
-}
-
-.imginfo h1{
+.text-heads h1{
     font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    color: #FF911C;
     font-size: 3em;
+    margin: 0 25%;
+    margin-bottom: 3%;
 }
 
-.imginfo p{
-    font-size: 1.1em;
-    margin-top: 5%;
-    margin-bottom: 5%;
+.text-heads p{
     font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    margin: 0 17%;
 }
 
-.imgsv1 {
-    width: 50%;
+.tp{
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    margin-top: 29px;
+}
+
+.Team{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 3%;
+    margin-left: 12%;
+}
+
+.T1,
+.T2,
+.T3,
+.T4{
+    position: relative;
     overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
+    width: 228px;
+    height: 300px
 }
 
-.imagen-principal img {
+.T1 img,
+.T2 img,
+.T3 img,
+.T4 img{
     width: 100%;
-    max-width: 100%;
     height: 100%;
-    object-fit: cover; 
+    transition: transform 0.5s;
 }
 
+.txt-T1,
+.txt-T2,
+.txt-T3,
+.txt-T4{
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(transparent, rgba(26, 8, 34, 0.7) 60%);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    padding: 0 20px;
+    transition: height 0.5s;
+    cursor: pointer;
+    border-radius: 0 0 25px 25px;
+}
 
+.txt-T1 h2,
+.txt-T2 h2,
+.txt-T3 h2,
+.txt-T4 h2{
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 80%;
+    margin-bottom: 5px;
+}
 
+.txt-T1 p,
+.txt-T2 p,
+.txt-T3 p,
+.txt-T4 p{
+    margin-top: 10px;
+    font-family: "Jost", sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.T1:hover .txt-T1,
+.T2:hover .txt-T2,
+.T3:hover .txt-T3,
+.T4:hover .txt-T4{
+    height: 100%;
+}
+
+.T1:hover .img-T1,
+.T2:hover .img-T2,
+.T3:hover .img-T3,
+.T4:hover .img-T4{
+    transform: scale(1.150);
+}
 
 
 footer {
-    background-color: #210B2B;
+    background-color: #1c0c32;
     color: #ffffff;
     padding: 40px 20px;
     font-family: 'Jost', sans-serif;
@@ -286,7 +328,7 @@ footer {
     font-size: 14px;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .footer-top {
         flex-direction: row;
         justify-content: space-between;
@@ -307,36 +349,4 @@ footer {
     }
 }
 
-@media screen and (max-width: 768px){
 
-    .burguer_menu,
-    .navegacion span{
-        display: block;
-    }
-
-
-    .navegacion{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        align-items: center;
-        background-color: #210B2B;
-        padding: .5em 3.5em;
-        gap: 3.8em;
-        overflow: hidden;
-        transform: translateX(100%); 
-        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    }
-
-    .navegacion.visible{
-        transform: translateX(0);
-        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .4);
-    }
-
-
-}

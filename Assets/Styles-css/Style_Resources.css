@@ -630,49 +630,10 @@ footer {
 
 }
 
-@media (min-width: 1100px) {
-    .Resources-nav {
-        flex-direction: column;
-    }
-
-    .Resources-nav button i {
-        font-size: 18px;
-        margin-right: 10px;
-    }
-}
-
 @media (max-width: 768px) {
-    .Resources-nav {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 10px;
-    }
-
-    .Resources-nav button {
-        flex-grow: 1;
-        height: 50px;
-        width: auto;
-        padding: 0;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .Resources-nav button .button-content {
-        display: none;
-    }
-
-    .Resources-nav button i {
-        font-size: 24px;
-        margin-right: 0;
-    }
-
     .card {
         flex-basis: 100%; 
-        border-radius: 80px;
     }
-    
 }
 
 
@@ -695,6 +656,48 @@ footer {
     .footer-bottom {
         flex-direction: row;
         justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    .Resources-nav {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .Resources-nav button {
+        flex-grow: 1;
+        height: 50px;
+        width: auto;
+        padding: 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Ocultar el texto en pantallas pequeñas */
+    .Resources-nav button .button-content {
+        display: none;
+    }
+
+    .Resources-nav button i {
+        font-size: 24px;
+        margin-right: 0;
+    }
+}
+
+/* Estilo para pantallas grandes */
+@media (min-width: 1100px) {
+    .Resources-nav {
+        flex-direction: column;
+    }
+
+    /* Mantener el ícono junto con el texto en pantallas grandes */
+    .Resources-nav button i {
+        font-size: 18px;
+        margin-right: 10px;
     }
 }
 

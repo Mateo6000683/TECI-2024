@@ -67,109 +67,244 @@ header{
     transform: scaleX(1);
 }
 
-.burguer_menu{
-    display: none;
-}
-
-.burguer_menu img{
-    height: 54px;
-    width: 43px;
-    cursor: pointer;
-}
-
-.navegacion span{
-    display: none;
-    font-size: 2.2em;
-    color: #FF911C;
-    margin-left: 100%;
-    cursor: pointer;
-}
-
-
 .Banner-Principal{
     height: 100vh;
     width: 100%;
 }
 
-
-
-button {
+.Welcome-Text{
     font-family: "Jost", sans-serif;
-    font-size: 0.9em;
-    --bg: #FF911C;
-    --text-color: #fff;
-    position: relative;
-    width: 50%;
-    border: none;
-    background: var(--bg);
-    color: var(--text-color);
-    padding: 1em;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: 0.2s;
-    border-radius: 5px;
-    opacity: 0.8;
-    letter-spacing: 1px;
-    box-shadow: #c0392b  0px 7px 2px, #000 0px 8px 5px;
+    color: #FFFF;
     text-align: center;
-    text-decoration: none; /* Para asegurarnos de que el enlace no tenga subrayado */
-    display: inline-block; /* Asegura que se comporte como un botón */
+    margin: 30px 10% 5px;
 }
 
-button:hover {
+.Welcome-Text h2{
+    font-weight: 600;
+    font-size: 2.3em;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.Welcome-Text p{
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.Container-Cards{
+    display: flex;
+    max-width: 100%;
+    height: 90vh;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    box-sizing: content-box;
+}
+
+.card-1,
+.card-3{
+    position: relative;
+    width: 255px;
+    height: 355px;
+    margin: 0 50px;
+    border-radius: 25px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .3);
+}
+
+.card-2{
+    position: relative;
+    width: 350px;
+    height: 450px;
+    margin: 0 50px;
+    border-radius: 25px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .3);
+}
+
+.content-1,
+.content-3{
+    width: 100%;
+    height: 100%;
+}
+
+.content-2{
+    width: 100%;
+    height: 100%;
+}
+
+.content-1 img,
+.content-3 img{
+    width: 100%;
+    height: 100%;
+}
+
+.content-2 img{
+    width: 100%;
+    height: 100%;
+}
+
+.card-1-h,
+.card-3-h{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48, 30, 12, .6);
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+    padding: 55% 8%;
+    transition: all 0.7s ease;
+    cursor: pointer;
+}
+
+.card-2-h{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48, 30, 12, .6);
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+    padding: 55% 8%;
+    transition: all 0.7s ease;
+    cursor: pointer;
+}
+
+.card-1-h h2,
+.card-3-h h2{
+    font-family: "Jost", sans-serif;
+    font-weight: 600;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.card-2-h h2{
+    font-family: "Jost", sans-serif;
+    font-weight: 600;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.card-1-h p,
+.card-3-h p{
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+.card-2-h p{
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+.card-1:hover .card-1-h,
+.card-3:hover .card-3-h{
     opacity: 1;
 }
 
-button:active {
-    top: 4px;
-    box-shadow: #c0392b 0px 3px 2px,#000 0px 3px 5px;
+.card-2:hover .card-2-h{
+    opacity: 1;
 }
 
-.projects {
-    display: flex;
-    margin: 5%;
-    align-items: center;
-}
-
-.imginfo {
-    color: #FFFF;
-    width: 40%;
-    margin: 5% 0;
-    margin-right: 5%;
-    margin-left: 3%;
-    font-size: 1.1rem;
-}
-
-.imginfo h1{
+.AU{
     font-family: "IM Fell Double Pica SC", serif;
-    font-size: 3em;
+    font-weight: 400;
+    text-align: center;
+    color: #FFFF;
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
 }
 
-.imginfo p{
-    font-size: 1.1em;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    font-family: "Jost", sans-serif;
-}
-
-.imgsv1 {
-    width: 50%;
-    overflow: hidden;
-}
-
-.imagen-principal img {
+.app-use-container{
     width: 100%;
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover; 
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
 
+.app1,
+.app2,
+.app3,
+.app4,
+.app5,
+.app6,
+.app7,
+.app8,
+.app9{
+    display: flex;
+}
 
+.app1 img,
+.app2 img,
+.app3 img,
+.app4 img,
+.app5 img,
+.app6 img,
+.app7 img,
+.app8 img,
+.app9 img{
+    width: 80px;
+    height: 80px;
+}
 
+.app1 h3,
+.app2 h3,
+.app3 h3,
+.app4 h3,
+.app5 h3,
+.app6 h3,
+.app7 h3,
+.app8 h3,
+.app9 h3{
 
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6),
+                 0 0 20px rgba(255, 255, 255, 0.4),
+                 0 0 30px rgba(255, 255, 255, 0.2);
+}
 
+.app1 p,
+.app2 p,
+.app3 p,
+.app4 p,
+.app5 p,
+.app6 p,
+.app7 p,
+.app8 p,
+.app9 p{
+    font-family: "Jost", sans-serif;
+    font-weight: 300;
+    color: white;
+}
+
+.text-au{
+    text-align: left;
+    padding: 5px 15px;
+}
+
+.app1 h3,
+.app2 h3,
+.app3 h3,
+.app5 h3,
+.app6 h3,
+.app8 h3,
+.app9 h3{
+    margin-bottom: 8px;
+}
 footer {
-    background-color: #210B2B;
+    background-color: #1c0c32;
     color: #ffffff;
     padding: 40px 20px;
     font-family: 'Jost', sans-serif;
@@ -307,36 +442,5 @@ footer {
     }
 }
 
-@media screen and (max-width: 768px){
-
-    .burguer_menu,
-    .navegacion span{
-        display: block;
-    }
 
 
-    .navegacion{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        align-items: center;
-        background-color: #210B2B;
-        padding: .5em 3.5em;
-        gap: 3.8em;
-        overflow: hidden;
-        transform: translateX(100%); 
-        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    }
-
-    .navegacion.visible{
-        transform: translateX(0);
-        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .4);
-    }
-
-
-}
