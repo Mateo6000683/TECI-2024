@@ -89,6 +89,12 @@ button {
     letter-spacing: 1px;
     box-shadow: #c0392b 0px 7px 2px, #000 0px 8px 5px;
 }
+
+
+button a{
+    text-decoration:none;
+    color: #fff;
+}
   
 button:hover {
     opacity: 1;
