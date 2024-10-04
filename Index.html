@@ -15,6 +15,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap" rel="stylesheet">
     <script src="/Assets/JavaScript/Header_Res.js" defer></script>
+       
+
 
     <title>Inicio</title>
 
@@ -265,49 +267,31 @@
     <br>
     <br>
     <br>
-         <!--acordeon-->
-  
-     <div class="wrapper">
-        <div class="container">
-            <input type="radio" name="slide" id="c1" checked>
-            <label for="c1" class="card">
-                <div class="row">
-                    <div class="icon">1</div>
-                    <div class="description">
-                        <h4>Igloo INC.</h4>
-                        
-                    </div>
-                </div>
-            </label>
-            <input type="radio" name="slide" id="c2" >
-            <label for="c2" class="card">
-                <div class="row1">
-                    <div class="icon">2</div>
-                    <div class="description">
-                        <h4>Fritz-Cola</h4>
-                        
-                    </div>
-                </div>
-            </label>
-            <input type="radio" name="slide" id="c3" >
-            <label for="c3" class="card">
-                <div class="row2">
-                    <div class="icon">3</div>
-                    <div class="description">
-                        <h4>Funtech INC</h4>
-                    </div>
-                </div>
-                
+         <!-- cards-->
+    <section class="container2">
+        <!-- Tarjetas -->
+        <div class="cards">
+            <div class="card card-1" data-card="1">
+                <img src="Assets/Images/igloo INCA.png" class="expandable-image" alt="Igloo Image">
+                <h2>Igloo INC.</h2>
+            </div>
+            <div class="card card-2" data-card="2">
+                <img src="Assets/Images/fritz-kolaA.png" class="expandable-image" alt="Fritz-Cola Image">
+                <h2>Fritz-Cola</h2>
+            </div>
+            <div class="card card-3" data-card="3">
+                <img src="Assets/Images/fruntechA.png" class="expandable-image" alt="Funtech Image">
+                <h2>Funtech INC.</h2>
+            </div>
         </div>
-        <div class="description1">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sint, minus facilis est non distinctio ipsam vero dolores magni ducimus praesentium, architecto perferendis aspernatur at voluptatem sunt aperiam perspiciatis repellendus!
-            </p>
-            <button class="button type1">
-                <span class="btn-txt">WEB PAGE</span>
-            </button> 
+    
+        <!-- Sección de información específica -->
+        <div class="info-content" id="info-content">
+            <p id="info-text">Haz clic en una tarjeta para ver la información.</p>
+            <a href="https://www.awwwards.com/" class="btn" id="info-btn">Explore Web Page</a>
         </div>
-    </div>
+    </section>
+     <!-- end cards-->
 
     <footer>
 
@@ -380,51 +364,7 @@
 
         
     </footer>
-     <script>
-        document.querySelectorAll('input[name="slide"]').forEach(radio => {
-          radio.addEventListener('change', function() {
-            const selectedLabel = this.nextElementSibling;
-            const h4Color = window.getComputedStyle(selectedLabel.querySelector('h4')).color;
-            const button = document.querySelector('.button.type1');
-      
-            button.style.borderColor = h4Color;
-            button.style.color = h4Color;
-      
-            // Cambiar el color de fondo del botón al hacer hover
-            const descriptionBackground = window.getComputedStyle(selectedLabel.querySelector('.row')).backgroundColor;
-      
-            const styleSheet = document.styleSheets[0];
-            const afterRuleIndex = Array.from(styleSheet.cssRules).findIndex(rule => rule.selectorText === '.type1::after');
-            
-            if (afterRuleIndex !== -1) {
-              styleSheet.deleteRule(afterRuleIndex);
-            }
-      
-            styleSheet.insertRule(`
-              .type1::after {
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 0;
-                transition: all 0.5s ease-in-out;
-                background-color: ${descriptionBackground};
-                border-radius: 30px;
-                visibility: hidden;
-                height: 10px;
-                width: 10px;
-                z-index: -1;
-              }
-            `, styleSheet.cssRules.length);
-            
-            button.addEventListener('mouseover', function() {
-              this.style.backgroundColor = descriptionBackground;
-            });
-            button.addEventListener('mouseout', function() {
-              this.style.backgroundColor = 'transparent';
-            });
-          });
-        });
-      </script>
+     
 
 
 </body>

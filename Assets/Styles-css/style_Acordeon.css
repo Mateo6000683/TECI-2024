@@ -1,217 +1,198 @@
 
-.wrapper {
+/* Reiniciar márgenes y rellenos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+.container2 {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  flex-wrap: wrap;
 }
 
-.container {
-  height: 400px;
+/* Tarjetas */
+.cards {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: start;
+  flex-direction: row;
+  gap: 20px;
 }
 
+/* Tarjetas individuales */
 .card {
-  width: 80px;
-  border-radius: .75rem;
-  background-size: cover;
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 2rem;
-  margin: 0 10px;
-  display: flex;
-  align-items: flex-end;
-  transition: .6s cubic-bezier(.28,-0.03,0,.99);
-  box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
-}
-
-.card > .row {
-  color: rgb(255, 255, 255);
-  display: flex;
-  flex-wrap: nowrap;
-  background: #6DB8E0;
-}
-
-.card > .row > .icon {
-  background: #223;
-  color: white;
-  border-radius: 50%;
-  width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 15px;
-}
-
-.card > .row > .description {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  overflow: hidden;
-  height: 80px;
-  width: 520px;
-  opacity: 0;
-  transform: translateY(30px);
-  transition-delay: .3s;
-  transition: all .3s ease;
-}
-.card > .row1 {
-  color: rgb(255, 255, 255);
-  display: flex;
-  flex-wrap: nowrap;
-  background: #911CFF;
-}
-
-.card > .row1 > .icon {
-  background: #223;
-  color: white;
-  border-radius: 50%;
-  width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 15px;
-}
-
-.card > .row1 > .description {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  overflow: hidden;
-  height: 80px;
-  width: 520px;
-  opacity: 0;
-  transform: translateY(30px);
-  transition-delay: .3s;
-  transition: all .3s ease;
-}
-.card > .row2 {
-  color: rgb(255, 255, 255);
-  display: flex;
-  flex-wrap: nowrap;
-  background: #FF911C;
-}
-
-.card > .row2 > .icon {
-  background: #223;
-  color: white;
-  border-radius: 50%;
-  width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 15px;
-}
-
-.card > .row2 > .description {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  overflow: hidden;
-  height: 80px;
-  width: 520px;
-  opacity: 0;
-  transform: translateY(30px);
-  transition-delay: .3s;
-  transition: all .3s ease;
-}
-
-
-
-h4 {
-  text-transform: uppercase;
-  display: flex;
-  justify-content: space-around;
-}
-
-input {
-  display: none;
-}
-
-input:checked + label {
-  width: 600px;
-}
-  
-
-input:checked + label .description {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-
-
-.card[for="c1"] {
-  background-image: url('https://blog.cryptoflies.com/wp-content/uploads/2024/06/pudgy-penguins-igloo-inc-overpassip-1170x658.png');
-}
-.card[for="c2"] {
-  background-image: url('https://fritz-kola.com/fritz-kola.com/products/desktop/58/image-thumb__58__product_range_slider/Fk_Internationale_Motive_OhneZucker.101d7d17.png');
-}
-.card[for="c3"] {
-  background-image: url('https://thefwa.com/dyn/resources/Case_Model_Case/slide1/7/17077/1721265133/1364_span9/66986b4e7e76cfwa01.png');
-}
-
-p {
-  color: #b0b0ba;
-  padding-top: 5px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.description1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra horizontalmente */
-  gap: 10px;
-  text-align: center;
-}
-
-.description p {
-  font-size: 18px; /* Agranda el tamaño del texto */
-  line-height: 1.5; /* Mejora la legibilidad del texto */
-  margin: 0; /* Elimina cualquier margen adicional */
-}
-
-/* From Uiverse.io */ 
-.button {
-  height: 50px;
-  width: 200px;
   position: relative;
-  background-color: transparent;
-  cursor: pointer;
-  border: 2px solid #FF911C;
+  width: 100px;
+  height: 400px;
+  background-color: #250C30;
+  border-radius: 20px;
   overflow: hidden;
-  border-radius: 30px;
-  color: #FF911C;
+  cursor: pointer;
   transition: all 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #250C30;
 }
 
-.btn-txt {
+/* Las tarjetas se expanden al hacer hover */
+.card:hover {
+  width: 250px;
   z-index: 1;
-  font-weight: 800;
-  letter-spacing: 4px;
 }
 
-.type1::after {
-  content: "";
+/* Colores de las tarjetas */
+.card-1 {
+  background-color: #5ac0e5;
+}
+
+.card-2 {
+  background-color: #a142f5;
+}
+
+.card-3 {
+  background-color: #f5a142;
+}
+
+/* Ajustes para el texto superpuesto */
+.card h2 {
+  font-size: 14px;
+  color: white;
   position: absolute;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg); /* Combina los transform */
+  white-space: nowrap;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+
+/* Ocultar el título y mostrar la imagen al hacer hover */
+.card:hover h2 {
+  opacity: 0;
+}
+
+.expandable-image {
+  position: absolute; /* Asegúrate de que la imagen esté en posición absoluta */
   top: 0;
-  transition: all 0.5s ease-in-out;
-  background-color: #c56f12;
-  border-radius: 30px;
-  visibility: hidden;
-  height: 10px;
-  width: 10px;
-  z-index: -1;
+  left: 0;
+  width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho */
+  height: 100%; /* Asegúrate de que la imagen ocupe toda la altura */
+  object-fit: cover; /* Asegura que la imagen se ajuste bien sin distorsión */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0; /* Asegura que la imagen esté detrás del texto */
 }
 
-.button:hover {
-  box-shadow: 1px 1px 200px #252525;
+.card:hover .expandable-image {
+  opacity: 1;
+}
+
+/* Contenedor de la información */
+.info-content {
+  flex-grow: 1;
+  background-color: #250C30;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(143, 143, 143, 0.979);
+}
+
+
+.info-content p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  max-width: 300px;
   color: #fff;
-  border: none;
 }
 
-.type1:hover::after {
-  visibility: visible;
-  transform: scale(100) translateX(2px);
+.info-content .btn {
+  background-color: #72c0e5;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.info-content .btn:hover {
+  background-color: #5a9ec7;
+}
+
+/* Responsivo */
+@media screen and (max-width: 1200px) {
+  .container {
+      justify-content: center;
+      align-items: center;
+  }
+
+  .cards {
+      gap: 15px;
+  }
+
+  .card {
+      width: 150px;
+      height: 300px;
+  }
+
+  .info-content {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+
+  .cards {
+      flex-wrap: nowrap;
+      gap: 10px;
+      justify-content: flex-start;
+  }
+
+  .card {
+      width: 120px;
+      height: 250px;
+      flex-shrink: 0;
+  }
+
+  .info-content {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 400px;
+  }
+
+  .info-content p {
+      text-align: justify;
+      font-size: 14px;
+  }
+
+  .card h2 {
+      font-size: 12px;
+  }
+
+  .card:hover {
+      width: 120px; /* Evita que la tarjeta se expanda en pantallas pequeñas */
+  }
+
+  .expandable-image {
+      transform: none;
+      filter: none;
+  }
 }
