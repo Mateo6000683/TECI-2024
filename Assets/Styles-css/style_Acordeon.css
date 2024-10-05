@@ -1,4 +1,3 @@
-
 /* Reiniciar márgenes y rellenos */
 * {
   box-sizing: border-box;
@@ -7,7 +6,7 @@
 }
 
 /* Contenedor principal */
-.container2 {
+.custom-container-expand {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,14 +18,14 @@
 }
 
 /* Tarjetas */
-.cards {
+.custom-cards-expand {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
 
 /* Tarjetas individuales */
-.card {
+.custom-card-expand {
   position: relative;
   width: 100px;
   height: 400px;
@@ -42,26 +41,26 @@
 }
 
 /* Las tarjetas se expanden al hacer hover */
-.card:hover {
+.custom-card-expand:hover {
   width: 250px;
   z-index: 1;
 }
 
 /* Colores de las tarjetas */
-.card-1 {
+.custom-card-1 {
   background-color: #5ac0e5;
 }
 
-.card-2 {
+.custom-card-2 {
   background-color: #a142f5;
 }
 
-.card-3 {
+.custom-card-3 {
   background-color: #f5a142;
 }
 
 /* Ajustes para el texto superpuesto */
-.card h2 {
+.custom-card-expand h2 {
   font-size: 14px;
   color: white;
   position: absolute;
@@ -73,13 +72,12 @@
   transition: opacity 0.3s ease;
 }
 
-
 /* Ocultar el título y mostrar la imagen al hacer hover */
-.card:hover h2 {
+.custom-card-expand:hover h2 {
   opacity: 0;
 }
 
-.expandable-image {
+.custom-expandable-image {
   position: absolute; /* Asegúrate de que la imagen esté en posición absoluta */
   top: 0;
   left: 0;
@@ -91,12 +89,12 @@
   z-index: 0; /* Asegura que la imagen esté detrás del texto */
 }
 
-.card:hover .expandable-image {
+.custom-card-expand:hover .custom-expandable-image {
   opacity: 1;
 }
 
 /* Contenedor de la información */
-.info-content {
+.custom-info-content-expand {
   flex-grow: 1;
   background-color: #250C30;
   padding: 20px;
@@ -110,15 +108,14 @@
   box-shadow: 0 5px 10px rgba(143, 143, 143, 0.979);
 }
 
-
-.info-content p {
+.custom-info-content-expand p {
   margin-bottom: 20px;
   line-height: 1.6;
   max-width: 300px;
   color: #fff;
 }
 
-.info-content .btn {
+.custom-info-content-expand .custom-btn {
   background-color: #72c0e5;
   color: rgb(255, 255, 255);
   padding: 10px 20px;
@@ -128,71 +125,81 @@
   transition: background-color 0.3s ease;
 }
 
-.info-content .btn:hover {
+.custom-info-content-expand .custom-btn:hover {
   background-color: #5a9ec7;
 }
 
-/* Responsivo */
+/* Ajustes Responsivos */
+
+/* Pantallas medianas (menos de 1200px) */
 @media screen and (max-width: 1200px) {
-  .container {
+  .custom-container-expand {
       justify-content: center;
       align-items: center;
+      padding: 10px; /* Reducción del padding */
   }
 
-  .cards {
+  .custom-cards-expand {
       gap: 15px;
+      justify-content: center; /* Centra las tarjetas */
   }
 
-  .card {
-      width: 150px;
-      height: 300px;
+  .custom-card-expand {
+      width: 140px; /* Ajuste de ancho */
+      height: 300px; /* Ajuste de altura */
   }
 
-  .info-content {
+  .custom-info-content-expand {
       margin-top: 20px;
       width: 100%;
-      max-width: 400px;
+      max-width: 350px;
+      padding: 15px; /* Reducción de padding */
   }
 }
 
+/* Pantallas pequeñas (menos de 768px) */
 @media screen and (max-width: 768px) {
-  .container {
+  .custom-container-expand {
       flex-direction: column;
+      padding: 10px; /* Reducción del padding */
   }
 
-  .cards {
+  .custom-cards-expand {
       flex-wrap: nowrap;
       gap: 10px;
-      justify-content: flex-start;
+      justify-content: center; /* Centra las tarjetas en pantallas pequeñas */
   }
 
-  .card {
-      width: 120px;
-      height: 250px;
+  .custom-card-expand {
+      width: 120px; /* Ajuste de ancho */
+      height: 250px; /* Ajuste de altura */
       flex-shrink: 0;
   }
 
-  .info-content {
+  .custom-info-content-expand {
       margin-top: 20px;
       width: 100%;
-      max-width: 400px;
+      max-width: 300px; /* Ajuste de ancho para pantallas pequeñas */
+      padding: 10px; /* Reducción del padding */
   }
 
-  .info-content p {
+  .custom-info-content-expand p {
       text-align: justify;
       font-size: 14px;
   }
 
-  .card h2 {
+  .custom-card-expand h2 {
       font-size: 12px;
   }
 
-  .card:hover {
+  .custom-card-expand:hover {
       width: 120px; /* Evita que la tarjeta se expanda en pantallas pequeñas */
   }
 
-  .expandable-image {
+  .custom-expandable-image {
       transform: none;
       filter: none;
   }
 }
+
+

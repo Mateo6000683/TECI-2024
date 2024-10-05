@@ -12,7 +12,7 @@ open.addEventListener("click", () => {
 close.addEventListener("click", () => {
     nav.classList.remove("visible");
 });
-// 
+//
 const cardData = {
     1: {
         text: "Información de Igloo INC. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -32,9 +32,9 @@ const cardData = {
 };
 
 // Selecciona todas las tarjetas y el contenido de información
-const cards = document.querySelectorAll('.card');
-const infoText = document.getElementById('info-text');
-const infoBtn = document.getElementById('info-btn');
+const cards = document.querySelectorAll('.custom-card-expand'); // Cambiado a 'custom-card-expand'
+const infoText = document.getElementById('info-text-expand'); // Cambiado a 'info-text-expand'
+const infoBtn = document.getElementById('info-btn'); // Este se mantiene igual
 
 // Añadir evento de clic a cada tarjeta
 cards.forEach(card => {
@@ -48,19 +48,45 @@ cards.forEach(card => {
     });
 });
 
-// para cambiar de color el boton 
-const cards1 = document.querySelectorAll('.card');
-    const btn = document.querySelector('.info-content .btn');
+// Para cambiar de color el botón 
+const btn = document.querySelector('.custom-info-content-expand .custom-btn'); // Cambiado a 'custom-info-content-expand' y 'custom-btn'
 
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            // Obtener el color de fondo de la tarjeta
-            const bgColor = getComputedStyle(card).backgroundColor;
-            btn.style.backgroundColor = bgColor; // Cambiar el color del botón
-        });
-
-        card.addEventListener('mouseleave', () => {
-            // Restablecer el color del botón al color por defecto
-            btn.style.backgroundColor = '#72c0e5'; // Color por defecto
-        });
+cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        // Obtener el color de fondo de la tarjeta
+        const bgColor = getComputedStyle(card).backgroundColor;
+        btn.style.backgroundColor = bgColor; // Cambiar el color del botón
     });
+
+    card.addEventListener('mouseleave', () => {
+        // Restablecer el color del botón al color por defecto
+        btn.style.backgroundColor = '#72c0e5'; // Color por defecto
+    });
+});
+
+
+// Para cambiar el color del botón y la sombra
+const infoContent = document.querySelector('.custom-info-content-expand'); // Selecciona el contenedor de información
+
+cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        // Obtener el color de fondo de la tarjeta
+        const bgColor = getComputedStyle(card).backgroundColor;
+
+        // Cambiar el color del botón
+        btn.style.backgroundColor = bgColor; // Cambiar el color del botón
+
+        // Cambiar el color de la sombra
+        infoContent.style.boxShadow = `0 5px 10px ${bgColor}`; // Cambia la sombra del contenedor de información
+    });
+
+    card.addEventListener('mouseleave', () => {
+        
+        btn.style.backgroundColor = '#72c0e5'; // Color por defecto
+        
+        // Restablecer la sombra al color por defecto
+        infoContent.style.boxShadow = '0 5px 10px #f5a142'; // Color por defecto de la sombra
+    });
+});
+
+
