@@ -1,0 +1,333 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-width: none
+}
+
+body{
+    background-color: #250C30;
+}
+
+
+.Container-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    font-family: "Jost", sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background-color: #210B2B;
+}
+
+.logo{
+    height: 74px;
+    width: 63px;
+    cursor: pointer;
+}
+
+
+.navegacion a{
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 40px;
+    color: #FF911C;
+}
+
+.navegacion a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #FF911C;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navegacion a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.burguer_menu{
+    display: none;
+}
+
+.burguer_menu img{
+    height: 54px;
+    width: 43px;
+    cursor: pointer;
+}
+
+.navegacion span{
+    display: none;
+    font-size: 2.2em;
+    color: #FF911C;
+    margin-left: 100%;
+    cursor: pointer;
+}
+
+.Banner-AboutUs {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+
+.Banner-AboutUs spline-viewer {
+    width: 100%;
+    height: 100%;
+}
+
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.background-spline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.background-spline spline-viewer {
+    width: 100%;
+    height: 100%;
+}
+
+.text-content {
+    position: absolute;
+    z-index: 2;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+
+h1 {
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    color: #FF911C;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: "Jost", sans-serif;
+    color: white;
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+
+.aboutus-card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px; 
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.aboutus-container {
+    height: 294px;
+    width: 240px;
+    color: white;
+    perspective: 1000px; 
+}
+
+.aboutus-card {
+    width: 100%;
+    height: 100%;
+    background: black;
+    border-radius: 2rem;
+    position: relative;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transform-style: preserve-3d;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.6); 
+}
+
+.aboutus-container:hover > .aboutus-card {
+    transform: rotateY(15deg) rotateX(10deg) translateZ(30px) scale(1.1);
+    box-shadow: 0px 20px 50px #ff911c86;
+    cursor: pointer;
+}
+
+.aboutus-front,
+.aboutus-back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutus-front {
+    background-color: rgba(71, 0, 95, 0.2);
+}
+
+.aboutus-front .aboutus-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.aboutus-back {
+    background-color: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+
+.aboutus-container:hover .aboutus-back {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+.aboutus-heading {
+    font-family: "IM Fell Double Pica SC", serif;
+    font-size: 1.8rem;
+    color: #FF911C;
+    text-align: center;
+}
+
+.aboutus-follow {
+    font-family: "Jost", sans-serif;
+    font-size: 1.1rem;
+    color: #fff;
+    font-style: italic;
+}
+
+/* General text styles */
+.text-content {
+    position: absolute;
+    z-index: 2;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+h1 {
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    color: #FF911C;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: "Jost", sans-serif;
+    color: white;
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+.tp {
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    color: #FF911C;
+    text-align: center;
+    font-size: 4rem;
+    margin: 2% 10%;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 400px) {
+    .aboutus-card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutus-container {
+        margin-bottom: 20px;
+    }
+
+    .aboutus-heading {
+        font-size: 16px;
+    }
+
+    .aboutus-follow {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-content {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tp {
+        font-size: 3rem;
+        margin: 10%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+
+
